@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Muller';
+  src: url('/assets/fonts/MullerLight.woff2') format('woff2'),
+    url('/assets/fonts/MullerLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('/assets/fonts/MullerRegular.woff2') format('woff2'),
+    url('/assets/fonts/MullerRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('/assets/fonts/MullerMedium.woff2') format('woff2'),
+    url('/assets/fonts/MullerMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('/assets/fonts/MullerBold.woff2') format('woff2'),
+    url('/assets/fonts/MullerBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: 'Muller', ui-sans-serif, system-ui;
+  background-color: #f7f3ec;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: linear-gradient(180deg, #f7f3ec 0%, #f1efe9 40%, #ffffff 100%);
+  color: #333333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+}
+
+.section-title {
+  @apply mb-8 text-3xl font-semibold text-charcoal sm:text-4xl;
+}
+
+.section-subtitle {
+  @apply text-sm uppercase tracking-[0.3em] text-brand-500;
+}
+
+.card-surface {
+  @apply rounded-3xl bg-white shadow-card;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-600;
+}
+
+.input-field {
+  @apply h-14 w-full rounded-2xl border border-transparent bg-white px-5 text-base text-charcoal placeholder:text-neutral-400 focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100;
+}
+
+.primary-btn {
+  @apply inline-flex items-center justify-center rounded-2xl bg-brand-500 px-6 py-3 text-base font-semibold text-white shadow transition-all duration-200 hover:bg-brand-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 disabled:cursor-not-allowed disabled:bg-brand-200;
+}
+
+.secondary-btn {
+  @apply inline-flex items-center justify-center rounded-2xl border border-brand-500 px-6 py-3 text-base font-semibold text-brand-500 transition-colors duration-200 hover:bg-brand-500/10 hover:text-brand-600;
+}
