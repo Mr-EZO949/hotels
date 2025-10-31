@@ -163,7 +163,7 @@ export default function HomePage() {
         copy={copy.header}
         onToggleLanguage={() => setLanguage((prev) => (prev === 'ru' ? 'en' : 'ru'))}
       />
-      <main className="space-y-16 pb-20">
+      <main className="space-y-12 pb-20 sm:space-y-16">
         <div ref={reservationSectionRef}>
           <ReservationSection
             hotels={hotels}

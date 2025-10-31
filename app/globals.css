@@ -88,6 +88,12 @@ button:hover {
 
 .input-field {
   @apply h-14 w-full rounded-2xl border border-transparent bg-white px-5 text-base text-charcoal placeholder:text-neutral-400 focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100;
+  min-width: 0;
+}
+
+.input-field[type='date'] {
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .primary-btn {
